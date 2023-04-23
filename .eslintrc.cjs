@@ -6,27 +6,17 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
-    'plugin:prettier/recommended', // aquí es donde se extiende la configuración de Prettier
+    'plugin:prettier/recommended',
   ],
+  overrides: [],
   parserOptions: {
-    ecmaVersion: 12,
+    ecmaVersion: 'latest',
     sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
   },
-  plugins: [
-    'react',
-    'prettier', // asegúrate de tener el plugin de Prettier en la lista de plugins
-  ],
+  plugins: ['react'],
   rules: {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     semi: ['error', 'never'],
     'max-len': ['warn', { code: 120, tabWidth: 2 }],
-  },
-  settings: {
-    react: {
-      version: 'detect',
-    },
   },
 }
